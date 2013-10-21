@@ -1,0 +1,13 @@
+<div class="col-md-6">
+    <h1>Send a fax</h1>
+
+    <%= form_for :create, :html => {:multipart => true} do |f| %>
+
+      <%= f.text_field :destination, :placeholder => 'Destination', :class => 'form-control', :required => true %>
+      <%= f.text_field :subject, :placeholder => 'Subject', :class => 'form-control', :required => true %>
+      <%= f.file_field :my_file, :class => 'form-control', :required => true %>
+
+      <%= f.submit "Upload", :class => 'btn btn-info'  %>
+    <% end %>
+
+</div>
